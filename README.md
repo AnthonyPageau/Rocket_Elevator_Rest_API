@@ -1,5 +1,5 @@
 # Rocket_Elevator_Rest_API
-##Members of the team
+## Members of the team
 - **[Loïc Rico](https://github.com/ricoloic)**
 
 - **[Anthony Pageau](https://github.com/ricoloic)**
@@ -8,7 +8,7 @@
 
 - **[Louis-Felix Beland](https://github.com/ricoloic)**
 
-##How to know and to mapiuplate the status of all the relevant entities of the operational database
+## How to know and to mapiuplate the status of all the relevant entities of the operational database
 1- Retrieving the current status of a specific Battery:
 
     GET https://rocketrestapi.azurewebsites.net/api/Batterie/5	[1 = battery ID]
