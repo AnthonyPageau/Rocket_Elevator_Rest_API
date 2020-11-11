@@ -11,11 +11,11 @@
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
 1- Retrieving the current status of a specific Battery:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Batterie/5	[1 = battery ID]
+    GET https://rocketrestapi.azurewebsites.net/api/Battery/5	[1 = battery ID]
     SEND
 2- Changing the status of a specific Battery:
 
-    PUT https://rocketrestapi.azurewebsites.net/api/Batterie/5	[1 = battery ID]
+    PUT https://rocketrestapi.azurewebsites.net/api/Battery/5	[1 = battery ID]
     SEND
     An error will appear in the field, that's ok.
     Select:	 Body
