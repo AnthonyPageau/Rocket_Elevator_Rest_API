@@ -11,7 +11,7 @@
 - **[Alimourana Balde](https://github.com/alimourana)**
 
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
-### Here's a link to the collection of the requests in **[Postman](https://www.getpostman.com/collections/235303cc6adc84466663)**. If you prefer, you can do it manually with the walkthrough below.
+### Here's a link to the collection of the requests in **[Postman](https://stoner224.postman.co/collections/13408509-c0efb6fa-bb19-4079-9980-32c383261a0c?version=latest&workspace=dbe9588f-2096-4c82-8e20-4d22a241cb07)**. If you prefer, you can do it manually with the walkthrough below.
 
 1- Retrieving the current status of a specific Battery:
 
