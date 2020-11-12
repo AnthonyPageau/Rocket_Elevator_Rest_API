@@ -13,11 +13,12 @@
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
 1- Retrieving the current status of a specific Battery:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Battery/5	[1 = battery ID]
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     SEND
 2- Changing the status of a specific Battery:
 
-    PUT https://rocketrestapi.azurewebsites.net/api/Battery/5	[1 = battery ID]
+    PUT https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     SEND
     An error will appear in the field, that's ok.
     Select:	 Body
@@ -33,11 +34,13 @@
     You can verify if the change succeeded by doing a new GET on that specified Battery.
 3- Retrieving the current status of a specific Column:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Column/5 [1 = column ID]
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
     SEND
 4- Changing the status of a specific Column:
 
-    PUT https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
+    PUT 
+    https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
     SEND
     An error will appear in the field, that's ok.
     Select:  Body
@@ -53,11 +56,13 @@
     You can verify if the change succeeded by doing a new GET on that specified Column.
 5- Retrieving the current status of a specific Elevator:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
     SEND
 6- Changing the status of a specific Elevator:
 
-    PUT https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
+    PUT 
+    https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
     SEND
     Select:  Body
                 Raw
@@ -72,15 +77,18 @@
     You can verify if the change succeeded by doing a new GET on that specified Elevator.
 7- Retrieving a list of Elevators that are not in operation at the time of the request:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Elevator
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Elevator
     SEND
 8- Retrieving a list of Buildings that contain at least one battery, column or elevator requiring intervention:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Building
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Building
     SEND
 9- Retrieving a list of Leads created in the last 30 days who have not yet become customers:
 
-    GET https://rocketrestapi.azurewebsites.net/api/Lead
+    GET 
+    https://rocketrestapi.azurewebsites.net/api/Lead
     SEND 
 
 
