@@ -16,6 +16,7 @@
     GET 
     https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     SEND
+    
 2- Changing the status of a specific Battery:
 
     PUT 
@@ -23,19 +24,16 @@
     Select:	 Body
                 Raw
                 JSON application
-    In the text field, enter:
-
-{
-	"battery_status": "ACTIVE" or "Inactive" or "Intervention"
-} 
-
+    In the text field, enter: { "battery_status": "ACTIVE" or "Inactive" or "Intervention" } 
     SEND
     You can verify if it worked by retrieving the current status of the specific battery (STEP 1).
+    
 3- Retrieving the current status of a specific Column:
 
     GET 
     https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
     SEND
+    
 4- Changing the status of a specific Column:
 
     PUT 
@@ -43,19 +41,16 @@
     Select:  Body
                 Raw
                 JSON application
-    In the text field, enter:
-
-{ 
-	"column_status": "Active" or "Inactive" or "Intervention"
-} 
-
+    In the text field, enter: { "column_status": "Active" or "Inactive" or "Intervention" } 
     SEND
     You can verify if it worked by retrieving the current status of the specific column (STEP 3).
+    
 5- Retrieving the current status of a specific Elevator:
 
     GET 
     https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
     SEND
+    
 6- Changing the status of a specific Elevator:
 
     PUT 
@@ -63,24 +58,22 @@
     Select:  Body
                 Raw
                 JSON application
-    In the text field, enter:
-
-{ 
-	"elevator_status": "Active" or "Inactive" or "Intervention"
-} 
-
+    In the text field, enter: { "elevator_status": "Active" or "Inactive" or "Intervention" }
     SEND
     You can verify if it worked by retrieving the current status of the specific elevator (STEP 5).
+    
 7- Retrieving a list of Elevators that are not in operation at the time of the request:
 
     GET 
     https://rocketrestapi.azurewebsites.net/api/Elevator
     SEND
+    
 8- Retrieving a list of Buildings that contain at least one battery, column or elevator requiring intervention:
 
     GET 
     https://rocketrestapi.azurewebsites.net/api/Building
     SEND
+    
 9- Retrieving a list of Leads created in the last 30 days who have not yet become customers:
 
     GET 
