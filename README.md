@@ -30,7 +30,7 @@
 } 
 
     SEND
-    You can verify if the change succeeded by doing a new GET on that specified Battery.
+    You can verify if it worked by retrieving the current status of the specific battery (STEP 1).
 3- Retrieving the current status of a specific Column:
 
     GET 
@@ -50,7 +50,7 @@
 } 
 
     SEND
-    You can verify if the change succeeded by doing a new GET on that specified Column.
+    You can verify if it worked by retrieving the current status of the specific column (STEP 3).
 5- Retrieving the current status of a specific Elevator:
 
     GET 
@@ -70,7 +70,7 @@
 } 
 
     SEND
-    You can verify if the change succeeded by doing a new GET on that specified Elevator.
+    You can verify if it worked by retrieving the current status of the specific elevator (STEP 5).
 7- Retrieving a list of Elevators that are not in operation at the time of the request:
 
     GET 
