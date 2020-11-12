@@ -20,7 +20,6 @@
 
     PUT 
     https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
-    SEND
     Select:	 Body
                 Raw
                 JSON application
@@ -41,7 +40,6 @@
 
     PUT 
     https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
-    SEND
     Select:  Body
                 Raw
                 JSON application
@@ -62,7 +60,6 @@
 
     PUT 
     https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
-    SEND
     Select:  Body
                 Raw
                 JSON application
