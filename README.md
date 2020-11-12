@@ -8,6 +8,8 @@
 
 - **[Louis-Felix Beland](https://github.com/ricoloic)**
 
+- **[Alimourana Balde](https://github.com/alimourana)**
+
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
 1- Retrieving the current status of a specific Battery:
 
