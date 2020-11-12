@@ -21,7 +21,6 @@
     PUT 
     https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     SEND
-    An error will appear in the field, that's ok.
     Select:	 Body
                 Raw
                 JSON application
@@ -43,7 +42,6 @@
     PUT 
     https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
     SEND
-    An error will appear in the field, that's ok.
     Select:  Body
                 Raw
                 JSON application
