@@ -41,7 +41,7 @@
     Select:  Body
                 Raw
                 JSON
-    In the text field, enter: { "column_status": "Active" or "Inactive" or "Intervention" } 
+    In the text field, enter: { "column_status": "ACTIVE" or "Inactive" or "Intervention" } 
     SEND
     You can verify if it worked by retrieving the current status of the specific column (STEP 3).
     
@@ -58,7 +58,7 @@
     Select:  Body
                 Raw
                 JSON
-    In the text field, enter: { "elevator_status": "Active" or "Inactive" or "Intervention" }
+    In the text field, enter: { "elevator_status": "ACTIVE" or "Inactive" or "Intervention" }
     SEND
     You can verify if it worked by retrieving the current status of the specific elevator (STEP 5).
     
