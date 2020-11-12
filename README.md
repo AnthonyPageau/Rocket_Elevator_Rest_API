@@ -18,7 +18,8 @@
     SEND
 2- Changing the status of a specific Battery:
 
-    PUT https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
+    PUT 
+    https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     SEND
     An error will appear in the field, that's ok.
     Select:	 Body
