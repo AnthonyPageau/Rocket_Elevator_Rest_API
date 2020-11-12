@@ -26,7 +26,7 @@
     In the text field, enter:
 
 {
-	"battery_status": "ACTIVE" or "Inactive"
+	"battery_status": "ACTIVE" or "Inactive" or "Intervention"
 } 
 
     SEND
@@ -46,7 +46,7 @@
     In the text field, enter:
 
 { 
-	"column_status": "Active" or "Inactive" 
+	"column_status": "Active" or "Inactive" or "Intervention"
 } 
 
     SEND
@@ -66,7 +66,7 @@
     In the text field, enter:
 
 { 
-	"elevator_status": "Active" or "Inactive"
+	"elevator_status": "Active" or "Inactive" or "Intervention"
 } 
 
     SEND
