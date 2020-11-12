@@ -57,11 +57,13 @@ namespace RestApi.Controllers
             
             b.battery_status = battery.battery_status;
 
+
             _context.batteries.Update (b);
             _context.SaveChanges ();
             var status = new JObject ();
-            status["message"] = "The status has been change";
+            status["message"] = "The status of the Battery with the id number #" + b.Id + " have been changed to " + battery.battery_status;
             return Content (status.ToString (), "application/json");
+
         }
             
     }

@@ -9785,26 +9785,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "/Users/alimouranabalde/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\week8_rest_api\\RESTAPI\\RESTAPI\\RestApi\\RestApi.csproj",
+      "projectUniqueName": "/Users/alimouranabalde/Downloads/Deliverables/Rocket_Elevator_Rest_API/RestApi.csproj",
       "projectName": "RestApi",
-      "projectPath": "C:\\week8_rest_api\\RESTAPI\\RESTAPI\\RestApi\\RestApi.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\week8_rest_api\\RESTAPI\\RESTAPI\\RestApi\\obj\\",
+      "projectPath": "/Users/alimouranabalde/Downloads/Deliverables/Rocket_Elevator_Rest_API/RestApi.csproj",
+      "packagesPath": "/Users/alimouranabalde/.nuget/packages/",
+      "outputPath": "/Users/alimouranabalde/Downloads/Deliverables/Rocket_Elevator_Rest_API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/alimouranabalde/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9890,7 +9888,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
       }
     }
   },

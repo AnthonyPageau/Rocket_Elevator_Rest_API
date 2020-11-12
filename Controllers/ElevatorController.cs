@@ -73,7 +73,7 @@ namespace RestApi.Controllers
             _context.elevators.Update (e);
             _context.SaveChanges ();
             var status = new JObject ();
-            status["message"] = "The status has been change";
+            status["message"] = "The status of the Elevator with the id number #" + e.Id + " have been changed to " + e.elevator_status;
             return Content (status.ToString (), "application/json");
         }
     }
