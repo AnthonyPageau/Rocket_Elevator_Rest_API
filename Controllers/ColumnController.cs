@@ -61,7 +61,7 @@ namespace RestApi.Controllers
             _context.columns.Update (c);
             _context.SaveChanges ();
             var status = new JObject ();
-            status["message"] = "The status has been change";
+            status["message"] = "The status of the Column with the id number #" + c.Id + " have been changed to " + c.column_status;
             return Content (status.ToString (), "application/json");
         }
 
