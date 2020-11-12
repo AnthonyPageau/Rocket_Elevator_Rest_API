@@ -23,7 +23,7 @@
     https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
     Select:	 Body
                 Raw
-                JSON application
+                JSON
     In the text field, enter: { "battery_status": "ACTIVE" or "Inactive" or "Intervention" } 
     SEND
     You can verify if it worked by retrieving the current status of the specific battery (STEP 1).
@@ -40,7 +40,7 @@
     https://rocketrestapi.azurewebsites.net/api/Column/1 [1 = column ID]
     Select:  Body
                 Raw
-                JSON application
+                JSON
     In the text field, enter: { "column_status": "Active" or "Inactive" or "Intervention" } 
     SEND
     You can verify if it worked by retrieving the current status of the specific column (STEP 3).
@@ -57,7 +57,7 @@
     https://rocketrestapi.azurewebsites.net/api/Elevator/1 [1 = elevator ID]
     Select:  Body
                 Raw
-                JSON application
+                JSON
     In the text field, enter: { "elevator_status": "Active" or "Inactive" or "Intervention" }
     SEND
     You can verify if it worked by retrieving the current status of the specific elevator (STEP 5).
