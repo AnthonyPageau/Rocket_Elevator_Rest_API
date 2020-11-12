@@ -14,6 +14,7 @@
 ### Here's a link to the collection of the requests in **[Postman](https://www.getpostman.com/collections/235303cc6adc84466663)**. If you prefer, you can do it manually with the walkthrough below.
 
 1- Retrieving the current status of a specific Battery:
+    https://rocketrestapi.azurewebsites.net/api/Battery/1
 
     GET 
     https://rocketrestapi.azurewebsites.net/api/Battery/1	[1 = battery ID]
