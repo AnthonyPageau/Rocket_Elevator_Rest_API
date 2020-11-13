@@ -24,20 +24,22 @@ namespace RestApi.Controllers
         [HttpGet]
         public ActionResult<List<Building>> GetAll ()
         {
-            var list_el = _context.elevators.ToList();
-            var list_co = _context.columns.ToList();
-            var list_ba = _context.batteries.ToList();
-            var list_bu = _context.buildings.ToList();
-            List<Elevator> intervention_elevator = new List<Elevator>();
-            List<Column> intervention_column = new List<Column>();
-            List<Battery> intervention_battery = new List<Battery>();
-            List<Building> intervention_building = new List<Building>();
-
+            var list_el = _context.elevators.ToList(); // List of all the elevators in the database
+            var list_co = _context.columns.ToList(); // List of all the columns in the database
+            var list_ba = _context.batteries.ToList(); // List of all the batteries in the database
+            var list_bu = _context.buildings.ToList(); // List of all the buildings in the database
+            List<Elevator> intervention_elevator = new List<Elevator>(); // Elevators will be added in this list if they respect the requirements (If they have an intervention status)
+            List<Column> intervention_column = new List<Column>(); // Columns will be added in this list if they respect the requirements (If they have an intervention status)
+            List<Battery> intervention_battery = new List<Battery>(); // Batteries will be added in this list if they respect the requirements (If they have an intervention status)
+            List<Building> intervention_building = new List<Building>(); // // Buildings will be added in this list if they have at least a battery, column or elevator with an intervention status.
+            
+            // Add elevators with an intervention status in the list
             foreach (var elevator in list_el){
                 if (elevator.elevator_status == "Intervention"){
                     intervention_elevator.Add(elevator);
                 }
             }
+            // Add columns in the list if they have an elevator with an intervention status
             foreach (var elevator in intervention_elevator){
                 foreach (var column in list_co){
                     if (column.Id == elevator.column_id){
@@ -45,11 +47,13 @@ namespace RestApi.Controllers
                     }
                 }
             }
+            // Add columns with an intervention status in the list
             foreach (var column in list_co){
                 if (column.column_status == "Intervention"){
                     intervention_column.Add(column);
                 }
             }
+            // Add batteries in the list if they have a column with an intervention status
             foreach (var column in intervention_column){
                 foreach (var battery in list_ba){
                     if (battery.Id == column.battery_id){
@@ -57,11 +61,13 @@ namespace RestApi.Controllers
                     }
                 }
             }
+            // Add batteries with an intervention status in the list
             foreach (var battery in list_ba){
                 if (battery.battery_status == "Intervention"){
                     intervention_battery.Add(battery);
                 }
             }
+            // Add buildings in the list if they have a battery with an intervention status
             foreach (var battery in intervention_battery){
                 foreach (var building in list_bu){
                     if (building.Id == battery.building_id){
@@ -69,88 +75,9 @@ namespace RestApi.Controllers
                     }
                 }
             }
+            // Remove any duplicate buildings in the list
             List<Building> all_building = intervention_building.Distinct().ToList();
             return all_building;
-            //return intervention_building;
-        }
-
-        // GET: api/Building/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Building>> GetBuilding(long id)
-        {
-            var building = await _context.buildings.FindAsync(id);
-
-            if (building == null)
-            {
-                return NotFound();
-            }
-
-            return building;
-        }
-
-        // PUT: api/Building/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutBuilding(long id, Building building)
-        {
-            if (id != building.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(building).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BuildingExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Building
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Building>> PostBuilding(Building building)
-        {
-            _context.buildings.Add(building);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBuilding", new { id = building.Id }, building);
-        }
-
-        // DELETE: api/Building/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Building>> DeleteBuilding(long id)
-        {
-            var building = await _context.buildings.FindAsync(id);
-            if (building == null)
-            {
-                return NotFound();
-            }
-
-            _context.buildings.Remove(building);
-            await _context.SaveChangesAsync();
-
-            return building;
-        }
-
-        private bool BuildingExists(long id)
-        {
-            return _context.buildings.Any(e => e.Id == id);
-        }
+        }     
     }
 }

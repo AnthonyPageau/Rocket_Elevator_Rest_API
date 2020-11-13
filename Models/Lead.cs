@@ -5,11 +5,9 @@ namespace RestApi.Models
 {
     public partial class Lead
     {
-        // public Lead () {
-        //     Customer = new HashSet<Customer> ();
-        // }
-        
         public long Id {get; set;}
+        public long? user_id {get; set;}
+        
         public string full_name {get; set;}
         public string email {get; set;}
         public string phone {get; set;}
@@ -18,11 +16,9 @@ namespace RestApi.Models
         public string department {get; set;}
         public string project_description {get; set;}
         public string message {get; set;}
-        public long? user_id {get; set;}
+
         public DateTime? created_at {get; set;}
         public DateTime? updated_at {get; set;}
-
-        // public User users {get; set;}
 
     }
 }

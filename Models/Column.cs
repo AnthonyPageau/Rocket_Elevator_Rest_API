@@ -5,20 +5,16 @@ namespace RestApi.Models
 {
     public partial class Column
     {
-        // public Column () {
-        //     Elevator = new HashSet<Elevator> ();
-        // }
-        
         public long Id {get; set;}
         public long battery_id {get; set;}
+        public int number_of_floors_served {get; set;}
+
         public string column_type {get; set;}
         public string column_status {get; set;}
-        public int number_of_floors_served {get; set;}
         public string information {get; set;}
         public string notes {get; set;}
+        
         public DateTime? created_at {get; set;}
         public DateTime? updated_at {get; set;}
-        //public Battery batteries {get; set;}
-        //public List<Elevator> elevators {get; set;}
     }
 }

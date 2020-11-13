@@ -5,14 +5,9 @@ namespace RestApi.Models
 {
    public partial class Customer
     {
-        // public Customer () {
-        //     Building = new HashSet<Building> ();
-        // }
-
         public long Id {get; set;}
         public long? user_id {get; set;}
         public long? address_id {get; set;}
-        // public long? lead_id {get; set;}
 
         public string company_name {get; set;}
         public string company_contact_full_name {get; set;}
@@ -22,17 +17,8 @@ namespace RestApi.Models
         public string technical_authority_full_name {get; set;}
         public string technical_authority_phone_number {get; set;}
         public string technical_manager_email_service {get; set;}
-
+        
         public DateTime? created_at {get; set;}
         public DateTime? updated_at {get; set;}
-
-
-        // public User users { get; set; }
-        
-
-        // public Address addresses { get; set; }
-        // public ICollection<Building> buildings { get; set; }
     }
-
-
 }

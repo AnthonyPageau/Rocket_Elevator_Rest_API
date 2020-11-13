@@ -19,42 +19,22 @@ namespace RestApi.Controllers
         {
             _context = context;
         }
-
-        // GET: api/Lead
-        // public ActionResult<List<Lead>> GetAll () {
-        //     var listl = _context.leads.users.Include(cus => cus.customers);
-
-        //     if (listl == null) {
-        //         return NotFound ("Not Found");
-        //     }
-
-        //     List<Lead> list_lead = new List<Lead> ();
-        //     DateTime currentDate = DateTime.Now.AddDays (-30);
-        //     foreach (var l in listl) {
-        //         if (l.created_at >= currentDate) {
-        //             if (l.customers.ToList ().Count == 0) {
-        //                 list_lead.Add (l);
-        //             }
-        //         }
-        //     }
-        //     return list_lead;
-        // }
-        public ActionResult<List<Lead>> GetAll () {
-            var listl = _context.leads.ToList();
-            var UserAll = _context.users.ToList();
-
-            var CustomerAll = _context.customers.ToList();
+            public ActionResult<List<Lead>> GetAll () {
+            var listl = _context.leads.ToList(); // List of all the leads in the database
+            var UserAll = _context.users.ToList(); // List of all the users in the database
+            var CustomerAll = _context.customers.ToList(); // List of all the customers in the database
 
             if (listl == null) {
                 return NotFound ("Not Found");
             }
 
-            List<Lead> list_lead = new List<Lead> ();
-            List<Lead> list_l = new List<Lead> ();
-            List<Customer> list_customer = new List<Customer> ();
+            List<Lead> list_lead = new List<Lead> (); // Leads will be added in the list if they have been created in the last 30 days.
+            List<Lead> list_l = new List<Lead> (); // Same as list_lead but with no duplicate
 
+            // Contains the date that is 30 days from current day
             DateTime currentDate = DateTime.Now.AddDays (-30);
-            
+
+            // Find the list of leads created in the last 30 days
             foreach (var l in listl) {
 
                 if (l.created_at >= currentDate) {
@@ -62,7 +42,7 @@ namespace RestApi.Controllers
                     list_lead.Add (l);
                 }
             }
-
+            // Find the list of leads with no customer attached to it
             foreach (var lead in list_lead)
             {
                 foreach (var customer in CustomerAll)
@@ -73,7 +53,7 @@ namespace RestApi.Controllers
                     }
                 }
             }
-            
+            // Remove duplicates in the list
             List<Lead> final_list = list_l.Distinct().ToList();
             
             return final_list;

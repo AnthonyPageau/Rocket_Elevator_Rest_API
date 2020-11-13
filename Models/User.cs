@@ -5,11 +5,6 @@ namespace RestApi.Models
 {
     public partial class User
     {
-        // public User () {
-        //     customers = new HashSet<Customer> ();
-        //     // Employe = new HashSet<Employe> ();
-        // }
-
         public long Id {get; set;}
         public string first_name {get; set;}
         public string last_name {get; set;}
@@ -21,13 +16,5 @@ namespace RestApi.Models
         public string reset_password_token {get; set;}
         public DateTime? reset_password_sent_at {get; set;}
         public DateTime? remember_created_at {get; set;}
-
-        // public List<Customer> customers { get; set; }
-        // public List<Lead> leads { get; set; }
-
-
-        // public ICollection<Customer> customers { get; set; }
-        // public ICollection<Employe> employees { get; set; }
-
     }
 }

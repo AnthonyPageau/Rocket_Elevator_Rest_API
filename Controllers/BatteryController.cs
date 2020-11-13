@@ -38,7 +38,7 @@ namespace RestApi.Controllers
             {
                 return NotFound();
             }
-
+            // Create a message to show the new status
             var status = new JObject ();
             status["status"] = battery.battery_status;
             return Content (status.ToString (), "application/json");
@@ -57,9 +57,9 @@ namespace RestApi.Controllers
             
             b.battery_status = battery.battery_status;
 
-
             _context.batteries.Update (b);
             _context.SaveChanges ();
+            // Create a message to show the new status
             var status = new JObject ();
             status["message"] = "The status of the Battery with the id number #" + b.Id + " have been changed to " + battery.battery_status;
             return Content (status.ToString (), "application/json");
